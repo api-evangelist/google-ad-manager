@@ -1,0 +1,83 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/json-schema/json-schema.yml
+title: Google Ad Manager API Schema
+description: >-
+  JSON Schema for the Google Ad Manager API covering networks, ad units,
+  orders, companies, and reports.
+type: object
+properties:
+  Network:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the network.
+      displayName:
+        type: string
+        description: The display name of the network.
+      networkCode:
+        type: string
+        description: The network code.
+      timeZone:
+        type: string
+        description: The timezone of the network.
+      currencyCode:
+        type: string
+        description: The default currency code.
+    required:
+      - name
+      - networkCode
+  AdUnit:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the ad unit.
+      adUnitId:
+        type: string
+      displayName:
+        type: string
+      adUnitCode:
+        type: string
+      status:
+        type: string
+        enum:
+          - ACTIVE
+          - INACTIVE
+          - ARCHIVED
+    required:
+      - name
+  Order:
+    type: object
+    properties:
+      name:
+        type: string
+      orderId:
+        type: string
+      displayName:
+        type: string
+      advertiser:
+        type: string
+      status:
+        type: string
+    required:
+      - name
+  Company:
+    type: object
+    properties:
+      name:
+        type: string
+      companyId:
+        type: string
+      displayName:
+        type: string
+      type:
+        type: string
+        enum:
+          - ADVERTISER
+          - AGENCY
+          - HOUSE_ADVERTISER
+          - HOUSE_AGENCY
+    required:
+      - name
+      - type

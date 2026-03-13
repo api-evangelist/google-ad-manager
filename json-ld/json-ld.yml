@@ -1,0 +1,16 @@
+"@context":
+  "@vocab": https://schema.org/
+  gam: https://developers.google.com/ad-manager/api/beta/reference/rest/v1/
+  name: schema:name
+  description: schema:description
+  url: schema:url
+  networkCode: gam:networkCode
+  adUnitId: gam:adUnitId
+  adUnitCode: gam:adUnitCode
+  displayName: gam:displayName
+  orderId: gam:orderId
+  companyId: gam:companyId
+  advertiser: gam:advertiser
+  status: gam:status
+  currencyCode: gam:currencyCode
+  timeZone: gam:timeZone
