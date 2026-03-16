@@ -1,14 +1,16 @@
+aid: google-ad-manager
 name: Google Ad Manager API
 description: >-
   The Google Ad Manager API provides programmatic access to manage Ad Manager
   data including ad units, companies, orders, placements, line items, creatives,
   reports, and targeting. It enables publishers to automate their ad operations
   and integrate Ad Manager with other systems.
+type: Index
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 tags:
   - Ad Serving
   - Ad Operations
@@ -19,7 +21,8 @@ tags:
   - Targeting
   - Ad Manager
 apis:
-  - name: Google Ad Manager API
+  - aid: google-ad-manager:google-ad-manager
+    name: Google Ad Manager API
     description: >-
       The Ad Manager API enables programmatic management of ad inventory,
       orders, line items, creatives, reports, and targeting for publisher ad
@@ -34,7 +37,7 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
-  - type: GettingStarted
+  - type: Getting Started
     url: https://developers.google.com/ad-manager/api/beta/getting-started
   - type: Pricing
     url: https://admanager.google.com/home/
