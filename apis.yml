@@ -1,5 +1,5 @@
 aid: google-ad-manager
-name: Google Ad Manager API
+name: Google Ad Manager
 description: >-
   The Google Ad Manager API provides programmatic access to manage Ad Manager
   data including ad units, companies, orders, placements, line items, creatives,
