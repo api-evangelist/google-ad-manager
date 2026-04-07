@@ -28,6 +28,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListNetworksResponse'
+      tags:
+        - Networks
   /v1/{parent}/adUnits:
     get:
       summary: Google Ad Manager List ad units
@@ -54,6 +56,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListAdUnitsResponse'
+      tags:
+        - adUnits
   /v1/{parent}/orders:
     get:
       summary: Google Ad Manager List orders
@@ -72,6 +76,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListOrdersResponse'
+      tags:
+        - Orders
   /v1/{parent}/companies:
     get:
       summary: Google Ad Manager List companies
@@ -90,6 +96,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListCompaniesResponse'
+      tags:
+        - Companies
   /v1/{parent}/reports:run:
     post:
       summary: Google Ad Manager Run a report
@@ -113,6 +121,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Reports:run
 components:
   schemas:
     Network:
@@ -256,3 +266,9 @@ components:
 security:
   - oauth2:
       - https://www.googleapis.com/auth/admanager
+tags:
+  - name: adUnits
+  - name: Companies
+  - name: Networks
+  - name: Orders
+  - name: Reports:run

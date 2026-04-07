@@ -12,14 +12,14 @@ created: '2026-03-13'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-  - Ad Serving
-  - Ad Operations
-  - Publishers
-  - Orders
-  - Line Items
-  - Creatives
-  - Targeting
   - Ad Manager
+  - Ad Operations
+  - Ad Serving
+  - Creatives
+  - Line Items
+  - Orders
+  - Publishers
+  - Targeting
 apis:
   - aid: google-ad-manager:google-ad-manager
     name: Google Ad Manager API
