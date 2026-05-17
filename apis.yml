@@ -37,7 +37,7 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/ad-manager/api/beta/getting-started
   - type: Pricing
     url: https://admanager.google.com/home/
