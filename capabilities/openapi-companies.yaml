@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Ad Manager API — Companies
+  description: 'Google Ad Manager API — Companies. 1 operations. Lead operation: Google Ad Manager List companies. Self-contained
+    Naftiko capability covering one Google Ad Manager business surface.'
+  tags:
+  - Google Ad Manager
+  - Companies
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_AD_MANAGER_API_KEY: GOOGLE_AD_MANAGER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-companies
+    baseUri: https://admanager.googleapis.com
+    description: Google Ad Manager API — Companies business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-parent-companies
+      path: /v1/{parent}/companies
+      operations:
+      - name: listcompanies
+        method: GET
+        description: Google Ad Manager List companies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: parent
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_AD_MANAGER_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-companies-rest
+    port: 8080
+    description: REST adapter for Google Ad Manager API — Companies. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/v1/{parent}/companies
+      name: v1-parent-companies
+      description: REST surface for v1-parent-companies.
+      operations:
+      - method: GET
+        name: listcompanies
+        description: Google Ad Manager List companies
+        call: openapi-companies.listcompanies
+        with:
+          parent: rest.parent
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-companies-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Ad Manager API — Companies. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: google-ad-manager-list-companies
+      description: Google Ad Manager List companies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-companies.listcompanies
+      with:
+        parent: tools.parent
+      outputParameters:
+      - type: object
+        mapping: $.
