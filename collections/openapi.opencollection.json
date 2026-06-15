@@ -1,0 +1,159 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Ad Manager API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Networks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Ad Manager List networks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admanager.googleapis.com/v1/networks"
+          },
+          "docs": "Lists networks accessible by the current user."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "adUnits",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Ad Manager List ad units",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admanager.googleapis.com/v1/:parent/adUnits",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists ad units in the specified network."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Ad Manager List orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admanager.googleapis.com/v1/:parent/orders",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists orders in the specified network."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Ad Manager List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admanager.googleapis.com/v1/:parent/companies",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists companies in the specified network."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reports:run",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Ad Manager Run a report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://admanager.googleapis.com/v1/:parent/reports:run",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Initiates the running of a report asynchronously."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
