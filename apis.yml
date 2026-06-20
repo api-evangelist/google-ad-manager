@@ -5,7 +5,7 @@ description: >-
   orders, placements, line items, creatives, reports, and targeting. It enables publishers to automate their ad
   operations and integrate Ad Manager with other systems.
 type: Index
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
