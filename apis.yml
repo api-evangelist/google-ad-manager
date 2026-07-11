@@ -35,6 +35,12 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-ad-manager-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-ad-manager-domain-security.yml
+  - type: Authentication
+    url: authentication/google-ad-manager-authentication.yml
   - type: OAuthScopes
     url: scopes/google-ad-manager-scopes.yml
   - type: GitHubOrganization
