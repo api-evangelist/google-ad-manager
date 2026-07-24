@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: Google Ad Manager adUnits Reports:run API
+  description: The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/ad-manager/api/start
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://admanager.googleapis.com
+  description: Ad Manager API server
+security:
+- oauth2:
+  - https://www.googleapis.com/auth/admanager
+tags:
+- name: Reports:run
+paths:
+  /v1/{parent}/reports:run:
+    post:
+      summary: Google Ad Manager Run a report
+      description: Initiates the running of a report asynchronously.
+      operationId: runReport
+      parameters:
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RunReportRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+      tags:
+      - Reports:run
+components:
+  schemas:
+    RunReportRequest:
+      type: object
+      properties:
+        reportDefinition:
+          type: object
+          properties:
+            dimensions:
+              type: array
+              items:
+                type: string
+            metrics:
+              type: array
+              items:
+                type: string
+            dateRange:
+              type: object
+              properties:
+                startDate:
+                  type: string
+                  format: date
+                endDate:
+                  type: string
+                  format: date
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        result:
+          type: object
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/admanager: Manage Ad Manager data

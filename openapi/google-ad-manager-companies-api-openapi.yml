@@ -1,0 +1,76 @@
+openapi: 3.1.0
+info:
+  title: Google Ad Manager adUnits Companies API
+  description: The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/ad-manager/api/start
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://admanager.googleapis.com
+  description: Ad Manager API server
+security:
+- oauth2:
+  - https://www.googleapis.com/auth/admanager
+tags:
+- name: Companies
+paths:
+  /v1/{parent}/companies:
+    get:
+      summary: Google Ad Manager List companies
+      description: Lists companies in the specified network.
+      operationId: listCompanies
+      parameters:
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListCompaniesResponse'
+      tags:
+      - Companies
+components:
+  schemas:
+    Company:
+      type: object
+      properties:
+        name:
+          type: string
+        companyId:
+          type: string
+        displayName:
+          type: string
+        type:
+          type: string
+          enum:
+          - ADVERTISER
+          - AGENCY
+          - HOUSE_ADVERTISER
+          - HOUSE_AGENCY
+    ListCompaniesResponse:
+      type: object
+      properties:
+        companies:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+        nextPageToken:
+          type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/admanager: Manage Ad Manager data

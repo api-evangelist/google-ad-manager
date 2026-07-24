@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Google Ad Manager adUnits Orders API
+  description: The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/ad-manager/api/start
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://admanager.googleapis.com
+  description: Ad Manager API server
+security:
+- oauth2:
+  - https://www.googleapis.com/auth/admanager
+tags:
+- name: Orders
+paths:
+  /v1/{parent}/orders:
+    get:
+      summary: Google Ad Manager List orders
+      description: Lists orders in the specified network.
+      operationId: listOrders
+      parameters:
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOrdersResponse'
+      tags:
+      - Orders
+components:
+  schemas:
+    ListOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+        nextPageToken:
+          type: string
+    Order:
+      type: object
+      properties:
+        name:
+          type: string
+        orderId:
+          type: string
+        displayName:
+          type: string
+        advertiser:
+          type: string
+        status:
+          type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/admanager: Manage Ad Manager data
