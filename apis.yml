@@ -5,7 +5,20 @@ description: >-
   orders, placements, line items, creatives, reports, and targeting. It enables publishers to automate their ad
   operations and integrate Ad Manager with other systems.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-ad-manager.png
 url: https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -20,20 +33,76 @@ tags:
   - Publishers
   - Targeting
 apis:
-  - aid: google-ad-manager:google-ad-manager
-    name: Google Ad Manager API
-    description: >-
-      The Ad Manager API enables programmatic management of ad inventory, orders, line items, creatives, reports, and
-      targeting for publisher ad operations and revenue management.
-    humanURL: https://developers.google.com/ad-manager/api/start
-    baseURL: https://admanager.googleapis.com
-    properties:
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: JSONSchema
-        url: json-schema/json-schema.yml
-      - type: JSONLD
-        url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-adunits-api
+  name: Google Ad Manager adUnits API
+  description: The adUnits API from Google Ad Manager — 1 operation(s) for adunits.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - adUnits
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-adunits-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-companies-api
+  name: Google Ad Manager Companies API
+  description: The Companies API from Google Ad Manager — 1 operation(s) for companies.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-companies-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-networks-api
+  name: Google Ad Manager Networks API
+  description: The Networks API from Google Ad Manager — 1 operation(s) for networks.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - Networks
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-networks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-orders-api
+  name: Google Ad Manager Orders API
+  description: The Orders API from Google Ad Manager — 1 operation(s) for orders.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-orders-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-reports-run-api
+  name: Google Ad Manager Reports:run API
+  description: The Reports:run API from Google Ad Manager — 1 operation(s) for reports:run.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - Reports:run
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-reports-run-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
 common:
   - type: AgenticAccess
     url: agentic-access/google-ad-manager-agentic-access.yml
