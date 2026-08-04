@@ -1,0 +1,274 @@
+openapi: 3.1.0
+info:
+  title: Google Ad Manager API
+  description: >-
+    The Google Ad Manager API provides programmatic access to manage Ad Manager
+    data including networks, ad units, companies, orders, placements, line items,
+    creatives, reports, and targeting configurations.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/ad-manager/api/start
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+  - url: https://admanager.googleapis.com
+    description: Ad Manager API server
+paths:
+  /v1/networks:
+    get:
+      summary: Google Ad Manager List networks
+      description: Lists networks accessible by the current user.
+      operationId: listNetworks
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListNetworksResponse'
+      tags:
+        - Networks
+  /v1/{parent}/adUnits:
+    get:
+      summary: Google Ad Manager List ad units
+      description: Lists ad units in the specified network.
+      operationId: listAdUnits
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAdUnitsResponse'
+      tags:
+        - adUnits
+  /v1/{parent}/orders:
+    get:
+      summary: Google Ad Manager List orders
+      description: Lists orders in the specified network.
+      operationId: listOrders
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOrdersResponse'
+      tags:
+        - Orders
+  /v1/{parent}/companies:
+    get:
+      summary: Google Ad Manager List companies
+      description: Lists companies in the specified network.
+      operationId: listCompanies
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListCompaniesResponse'
+      tags:
+        - Companies
+  /v1/{parent}/reports:run:
+    post:
+      summary: Google Ad Manager Run a report
+      description: Initiates the running of a report asynchronously.
+      operationId: runReport
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RunReportRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+      tags:
+        - Reports:run
+components:
+  schemas:
+    Network:
+      type: object
+      properties:
+        name:
+          type: string
+        displayName:
+          type: string
+        networkCode:
+          type: string
+        propertyCode:
+          type: string
+        timeZone:
+          type: string
+        currencyCode:
+          type: string
+    ListNetworksResponse:
+      type: object
+      properties:
+        networks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Network'
+    AdUnit:
+      type: object
+      properties:
+        name:
+          type: string
+        adUnitId:
+          type: string
+        displayName:
+          type: string
+        adUnitCode:
+          type: string
+        parentAdUnit:
+          type: string
+        status:
+          type: string
+          enum:
+            - ACTIVE
+            - INACTIVE
+            - ARCHIVED
+    ListAdUnitsResponse:
+      type: object
+      properties:
+        adUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdUnit'
+        nextPageToken:
+          type: string
+    Order:
+      type: object
+      properties:
+        name:
+          type: string
+        orderId:
+          type: string
+        displayName:
+          type: string
+        advertiser:
+          type: string
+        status:
+          type: string
+    ListOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+        nextPageToken:
+          type: string
+    Company:
+      type: object
+      properties:
+        name:
+          type: string
+        companyId:
+          type: string
+        displayName:
+          type: string
+        type:
+          type: string
+          enum:
+            - ADVERTISER
+            - AGENCY
+            - HOUSE_ADVERTISER
+            - HOUSE_AGENCY
+    ListCompaniesResponse:
+      type: object
+      properties:
+        companies:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+        nextPageToken:
+          type: string
+    RunReportRequest:
+      type: object
+      properties:
+        reportDefinition:
+          type: object
+          properties:
+            dimensions:
+              type: array
+              items:
+                type: string
+            metrics:
+              type: array
+              items:
+                type: string
+            dateRange:
+              type: object
+              properties:
+                startDate:
+                  type: string
+                  format: date
+                endDate:
+                  type: string
+                  format: date
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        result:
+          type: object
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/admanager: Manage Ad Manager data
+security:
+  - oauth2:
+      - https://www.googleapis.com/auth/admanager
+tags:
+  - name: adUnits
+  - name: Companies
+  - name: Networks
+  - name: Orders
+  - name: Reports:run

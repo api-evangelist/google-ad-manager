@@ -1,0 +1,22 @@
+{
+  "provider": "google-ad-manager",
+  "sources": [
+    "google-ad-manager-adunits-api-openapi.yml",
+    "google-ad-manager-companies-api-openapi.yml",
+    "google-ad-manager-networks-api-openapi.yml",
+    "google-ad-manager-orders-api-openapi.yml",
+    "google-ad-manager-reports-run-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-ad-manager-adunits-api-openapi.yml",
+    "google-ad-manager-companies-api-openapi.yml",
+    "google-ad-manager-networks-api-openapi.yml",
+    "google-ad-manager-orders-api-openapi.yml",
+    "google-ad-manager-reports-run-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
