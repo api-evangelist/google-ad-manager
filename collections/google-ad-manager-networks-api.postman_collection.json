@@ -1,0 +1,133 @@
+{
+  "item": [
+    {
+      "id": "196b2faf-47b5-4839-9378-48899399c97c",
+      "name": "Networks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8492f1ad-1552-4f01-abb0-08e8dd526f0a",
+          "name": "Google Ad Manager List networks",
+          "request": {
+            "name": "Google Ad Manager List networks",
+            "description": {
+              "content": "Lists networks accessible by the current user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "networks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b9ed72f-5a6f-4db7-850c-583cc52fcaf1",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "networks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"networks\": [\n    {\n      \"name\": \"string\",\n      \"displayName\": \"string\",\n      \"networkCode\": \"string\",\n      \"propertyCode\": \"string\",\n      \"timeZone\": \"string\",\n      \"currencyCode\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"displayName\": \"string\",\n      \"networkCode\": \"string\",\n      \"propertyCode\": \"string\",\n      \"timeZone\": \"string\",\n      \"currencyCode\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://admanager.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/admanager"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8259dc7e-4562-4dfc-8227-11379e404a44",
+    "name": "Google Ad Manager adUnits Networks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
