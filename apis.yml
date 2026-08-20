@@ -29,6 +29,15 @@ tags:
   - Ad Serving
   - Creatives
   - Line Items
+  - Order
+  - Publishers
+  - Targeting
+tags_raw:
+  - Ad Manager
+  - Ad Operations
+  - Ad Serving
+  - Creatives
+  - Line Items
   - Orders
   - Publishers
   - Targeting
@@ -39,6 +48,8 @@ apis:
   humanURL: https://developers.google.com/ad-manager/api/start
   baseURL: https://admanager.googleapis.com
   tags:
+  - Ad Units
+  tags_raw:
   - adUnits
   properties:
   - type: OpenAPI
@@ -81,6 +92,8 @@ apis:
   humanURL: https://developers.google.com/ad-manager/api/start
   baseURL: https://admanager.googleapis.com
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
