@@ -17,6 +17,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "google-ad-manager-adunits-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-ad-manager-companies-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-ad-manager-networks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-ad-manager-orders-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-ad-manager-reports-run-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
