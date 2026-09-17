@@ -54,22 +54,6 @@ tags_raw:
   - Publishers
   - Targeting
 apis:
-- aid: google-ad-manager:google-ad-manager-adunits-api
-  name: Google Ad Manager adUnits API
-  description: The adUnits API from Google Ad Manager — 1 operation(s) for adunits.
-  humanURL: https://developers.google.com/ad-manager/api/start
-  baseURL: https://admanager.googleapis.com
-  tags:
-  - Ad Units
-  tags_raw:
-  - adUnits
-  properties:
-  - type: OpenAPI
-    url: openapi/google-ad-manager-adunits-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/json-schema.yml
-  - type: JSONLD
-    url: json-ld/json-ld.yml
 - aid: google-ad-manager:google-ad-manager-companies-api
   name: Google Ad Manager Companies API
   description: The Companies API from Google Ad Manager — 1 operation(s) for companies.
@@ -124,6 +108,20 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-ad-manager-reports-run-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-ad-manager:google-ad-manager-ad-units-api
+  name: Google Ad Manager Ad Units API
+  description: The Ad Units API from Google Ad Manager — 1 operation(s) for ad units.
+  humanURL: https://developers.google.com/ad-manager/api/start
+  baseURL: https://admanager.googleapis.com
+  tags:
+  - Ad Units
+  properties:
+  - type: OpenAPI
+    url: openapi/google-ad-manager-ad-units-api-openapi.yml
   - type: JSONSchema
     url: json-schema/json-schema.yml
   - type: JSONLD
