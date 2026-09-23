@@ -16,7 +16,7 @@ security:
 - oauth2:
   - https://www.googleapis.com/auth/admanager
 tags:
-- name: adUnits
+- name: Ad Units
 paths:
   /v1/{parent}/adUnits:
     get:
@@ -45,9 +45,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListAdUnitsResponse'
       tags:
-      - adUnits
+      - Ad Units
 components:
   schemas:
+    ListAdUnitsResponse:
+      type: object
+      properties:
+        adUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdUnit'
+        nextPageToken:
+          type: string
     AdUnit:
       type: object
       properties:
@@ -67,15 +76,6 @@ components:
           - ACTIVE
           - INACTIVE
           - ARCHIVED
-    ListAdUnitsResponse:
-      type: object
-      properties:
-        adUnits:
-          type: array
-          items:
-            $ref: '#/components/schemas/AdUnit'
-        nextPageToken:
-          type: string
   securitySchemes:
     oauth2:
       type: oauth2

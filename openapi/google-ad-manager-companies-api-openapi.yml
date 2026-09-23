@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Ad Manager adUnits Companies API
+  title: Google Ad Manager Companies API
   description: The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.
   version: v1
   contact:
@@ -40,15 +40,6 @@ paths:
       - Companies
 components:
   schemas:
-    ListCompaniesResponse:
-      type: object
-      properties:
-        companies:
-          type: array
-          items:
-            $ref: '#/components/schemas/Company'
-        nextPageToken:
-          type: string
     Company:
       type: object
       properties:
@@ -65,6 +56,15 @@ components:
           - AGENCY
           - HOUSE_ADVERTISER
           - HOUSE_AGENCY
+    ListCompaniesResponse:
+      type: object
+      properties:
+        companies:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+        nextPageToken:
+          type: string
   securitySchemes:
     oauth2:
       type: oauth2

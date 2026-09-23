@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Ad Manager adUnits Reports:run API
+  title: Google Ad Manager Reports:run API
   description: The Google Ad Manager API provides programmatic access to manage Ad Manager data including networks, ad units, companies, orders, placements, line items, creatives, reports, and targeting configurations.
   version: v1
   contact:
