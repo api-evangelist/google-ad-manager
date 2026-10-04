@@ -40,6 +40,15 @@ paths:
       - Orders
 components:
   schemas:
+    ListOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+        nextPageToken:
+          type: string
     Order:
       type: object
       properties:
@@ -52,15 +61,6 @@ components:
         advertiser:
           type: string
         status:
-          type: string
-    ListOrdersResponse:
-      type: object
-      properties:
-        orders:
-          type: array
-          items:
-            $ref: '#/components/schemas/Order'
-        nextPageToken:
           type: string
   securitySchemes:
     oauth2:
