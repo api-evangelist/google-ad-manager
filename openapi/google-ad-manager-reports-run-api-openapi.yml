@@ -45,6 +45,15 @@ paths:
       - Reports:run
 components:
   schemas:
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        result:
+          type: object
     RunReportRequest:
       type: object
       properties:
@@ -68,15 +77,6 @@ components:
                 endDate:
                   type: string
                   format: date
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        result:
-          type: object
   securitySchemes:
     oauth2:
       type: oauth2

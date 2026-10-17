@@ -34,6 +34,13 @@ paths:
       - Networks
 components:
   schemas:
+    ListNetworksResponse:
+      type: object
+      properties:
+        networks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Network'
     Network:
       type: object
       properties:
@@ -49,13 +56,6 @@ components:
           type: string
         currencyCode:
           type: string
-    ListNetworksResponse:
-      type: object
-      properties:
-        networks:
-          type: array
-          items:
-            $ref: '#/components/schemas/Network'
   securitySchemes:
     oauth2:
       type: oauth2
