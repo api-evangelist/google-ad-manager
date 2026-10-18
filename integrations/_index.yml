@@ -77,5 +77,5 @@
     - connectors/applications/google-ad-manager
     vendor_link: https://admanager.google.com/home/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
