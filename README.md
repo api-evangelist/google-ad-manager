@@ -1,4 +1,4 @@
-# Google Ad Manager (google-ad-manager)
+# Google Ad Manager
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,54 +66,137 @@
 
 The Google Ad Manager API provides programmatic access to manage Ad Manager data including ad units, companies, orders, placements, line items, creatives, reports, and targeting. It enables publishers to automate their ad operations and integrate Ad Manager with other systems.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-ad-manager/refs/heads/main/apis.yml)
+**Areas:** Ad Manager · Ad Operations · Ad Serving · Creative · Line Items · Order · Publishers · Targeting
 
-## Scope
+## Google Ad Manager on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Ad Manager is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-ad-manager/](https://apis.io/providers/google-ad-manager/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Ad Manager
-- Ad Operations
-- Ad Serving
-- Creatives
-- Line Items
-- Orders
-- Publishers
-- Targeting
+- [Google Ad Manager Companies API](https://apis.io/apis/google-ad-manager/google-ad-manager-companies-api/) — The Companies API from Google Ad Manager — 1 operation(s) for companies.
+- [Google Ad Manager Networks API](https://apis.io/apis/google-ad-manager/google-ad-manager-networks-api/) — The Networks API from Google Ad Manager — 1 operation(s) for networks.
+- [Google Ad Manager Orders API](https://apis.io/apis/google-ad-manager/google-ad-manager-orders-api/) — The Orders API from Google Ad Manager — 1 operation(s) for orders.
+- [Google Ad Manager Reports:run API](https://apis.io/apis/google-ad-manager/google-ad-manager-reports-run-api/) — The Reports:run API from Google Ad Manager — 1 operation(s) for reports:run.
+- [Google Ad Manager Ad Units API](https://apis.io/apis/google-ad-manager/google-ad-manager-ad-units-api/) — The Ad Units API from Google Ad Manager — 1 operation(s) for ad units.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Ad Manager API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Ad Manager API enables programmatic management of ad inventory, orders, line items, creatives, reports, and targeting for publisher ad operations and revenue management.
+- [Google Ad Manager Agentic Access](https://apis.io/agentic-access/google-ad-manager/google-ad-manager-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/ad-manager/api/start](https://developers.google.com/ad-manager/api/start)
-- **Base URL:** `https://admanager.googleapis.com`
+#### Collections (6)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/json-schema.yml) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Google Ad Manager adUnits API](https://apis.io/collections/google-ad-manager/open-google-ad-manager-adunits-api/)
+- [Google Ad Manager adUnits Companies API](https://apis.io/collections/google-ad-manager/open-google-ad-manager-companies-api/)
+- [Google Ad Manager adUnits Networks API](https://apis.io/collections/google-ad-manager/open-google-ad-manager-networks-api/)
+- [Google Ad Manager adUnits Orders API](https://apis.io/collections/google-ad-manager/open-google-ad-manager-orders-api/)
+- [Google Ad Manager adUnits Reports:run API](https://apis.io/collections/google-ad-manager/open-google-ad-manager-reports-run-api/)
+- [Google Ad Manager API](https://apis.io/collections/google-ad-manager/open-openapi/)
 
-## Common Properties
+#### Governance rules (1)
 
-- [GitHub Organization](https://github.com/googleads)
-- [LinkedIn](https://www.linkedin.com/showcase/google-ad-manager)
-- [Getting Started](https://developers.google.com/ad-manager/api/beta/getting-started)
+Spectral rulesets for the provider's contracts.
+
+- [Google Ad Manager — jsonschema rules](https://apis.io/rules/google-ad-manager/google-ad-manager-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Ad Manager Authentication](https://apis.io/security/google-ad-manager/google-ad-manager-authentication/)
+- [Google Ad Manager Domain Security](https://apis.io/security/google-ad-manager/google-ad-manager-domain-security/)
+- [Google Ad Manager Vulnerability Disclosure](https://apis.io/security/google-ad-manager/google-ad-manager-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Ad Manager Scopes](https://apis.io/scopes/google-ad-manager/google-ad-manager-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Ad Manager Plans Pricing](https://apis.io/plans/google-ad-manager/google-ad-manager-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Ad Manager Rate Limits](https://apis.io/rate-limits/google-ad-manager/google-ad-manager-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Ad Manager Finops](https://apis.io/finops/google-ad-manager/google-ad-manager-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
+- [Getting started](https://developers.google.com/ad-manager/api/beta/getting-started)
 - [Pricing](https://admanager.google.com/home/)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [GitHub](https://github.com/googleads)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 52.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 18.4 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-ad-manager/](https://apis.io/providers/google-ad-manager/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Ad Manager: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-ad-manager/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
